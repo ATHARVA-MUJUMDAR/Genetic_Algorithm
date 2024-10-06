@@ -48,7 +48,7 @@ Crossover is the process by which two parents combine their genetic information 
 #### Mutation
 Mutation introduces random changes to the genes of an individual to maintain diversity in the population. Each gene has a small probability of mutating (in this case, 0.01). If a gene mutates, it is perturbed by a small random value drawn from a uniform distribution. This helps prevent premature convergence to suboptimal solutions.
 
-### Execution of GA
+## Execution of GA
 The Genetic Algorithm is executed for a maximum of 1000 generations. In each generation, the following steps are performed:
 
 1. Selection: Two parents are selected from the population using tournament selection.
@@ -59,8 +59,8 @@ The Genetic Algorithm is executed for a maximum of 1000 generations. In each gen
 At regular intervals (every 100 generations), the algorithm prints the best cost value observed so far, allowing us to monitor the progress of the GA.
 
 
-### Experimentation
-#### Experimental Setup
+## Experimentation
+### Experimental Setup
 The following parameters were used for the Genetic Algorithm:
 
 - Population Size: 100
@@ -73,13 +73,13 @@ The following parameters were used for the Genetic Algorithm:
 
 The dictionary matrix H was generated randomly, with each element drawn from a standard Gaussian distribution N(0, 1). Similarly, the measurement vector y was generated as a noisy observation by adding a small amount of random noise to the true signal Hx.
 
-#### Results and Visualizations
+## Results and Visualizations
 The Genetic Algorithm was able to recover a sparse approximation of x that closely matched the original signal after several generations. Over the course of 1000 generations, the cost function consistently decreased, indicating that the GA was effectively minimizing the reconstruction error.
 
-#### Visualization of Cost Function:
+## Visualization of Cost Function:
 The plot of the cost function over generations shows a rapid decline in the early stages of the algorithm, followed by a slower convergence towards the end. This behaviour is typical of Genetic Algorithms, where initial improvements are made quickly, but the algorithm takes longer to refine the solution as it approaches the global minimum.
 
-### Conclusions
+## Conclusions
 The experiment demonstrated that the Genetic Algorithm is a viable approach for solving the sparse signal recovery problem in under-determined systems. The algorithm successfully minimized the reconstruction error by evolving a population of candidate sparse vectors over multiple generations. 
 The main advantages of using GA for this problem are its ability to handle non-convex optimization landscapes and its robustness in exploring a large search space. However, GAs tends to converge slowly as the population approaches the optimal solution, which is evident from the gradual reduction in the cost function in the later stages of the experiment.
 In future work, it would be interesting to explore other optimization techniques, such as Simulated Annealing or Particle Swarm Optimization, to compare their performance with GA in this context. Additionally, the GA could be further optimized by fine-tuning parameters such as the mutation rate and crossover probability.
